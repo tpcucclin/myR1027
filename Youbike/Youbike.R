@@ -7,9 +7,10 @@ jdata <- fromJSON("ubikeNTP.json")
 str(jdata)
 jdata$sarea
 x=table(jdata$sarea)
+sort(x)
 y=sort(x,decreasing = TRUE)
 z=as.data.frame(y)
-summary(z$Fr)
+summary(z$Freq)
 boxplot(z$Freq)
 
 install.packages('data.table')
